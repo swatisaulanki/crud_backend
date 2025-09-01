@@ -50,7 +50,11 @@ configDotenv()
 const app = express();
 
 // Middlewares
-app.use(cors());
+// app.use(cors());
+app.use(cors({
+  origin: "http://localhost:3002", // frontend port
+  credentials: true,              // if you're using cookies or auth headers
+}));
 app.use(express.json()); // Must be before routes
 
 // Root route
@@ -67,7 +71,7 @@ const PORT = process.env.PORT || 6060;
 
 connection
   .then(() => {
-    console.log("✅ Connected to MongoDB");
+    console.log("Connected to MongoDB");
     app.listen(PORT, () => {
       console.log(`🚀 Server running on port ${PORT}`);
     });
@@ -75,3 +79,4 @@ connection
   .catch((err) => {
     console.error("❌ Error connecting to DB:", err);
   });
+

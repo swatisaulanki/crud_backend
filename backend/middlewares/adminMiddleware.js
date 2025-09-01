@@ -33,3 +33,5 @@ const adminOnly = (req, res, next) => {
 };
 
 module.exports = { protect, adminOnly };
+
+
