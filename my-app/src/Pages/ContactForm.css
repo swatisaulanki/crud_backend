@@ -1,0 +1,228 @@
+/* 🌐 Container */
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 1200px;
+  gap: 30px;
+}
+
+/* 📝 Contact Form */
+.contact-form {
+  width: 100%;
+  max-width: 520px;
+  padding: 25px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease-in-out;
+}
+
+.contact-form:hover {
+  transform: translateY(-2px);
+}
+
+/* 👤 Profile Pic */
+.profile-pic {
+  text-align: center;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.avatar {
+  width: 90px;
+  height: 90px;
+  background: linear-gradient(135deg, #e0e0e0, #f9f9f9);
+  border-radius: 50%;
+  margin: 0 auto;
+  border: 2px solid #ddd;
+}
+
+.add-btn {
+  position: absolute;
+  bottom: 5px;
+  right: calc(50% - 12px);
+  width: 28px;
+  height: 28px;
+  background: #1976d2;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease;
+}
+
+.add-btn:hover {
+  background: #1259a7;
+}
+
+/* 🔹 Form Fields */
+.form-group {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 14px;
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: #444;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  transition: border 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #1976d2;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(25, 118, 210, 0.2);
+}
+
+textarea {
+  resize: none;
+  height: 80px;
+}
+
+/* 🎂 Birthday */
+.birthday {
+  display: flex;
+  gap: 10px;
+}
+
+.birthday select,
+.birthday input {
+  flex: 1;
+}
+
+/* ➕ Add Email/Phone */
+.add-link {
+  background: none;
+  border: none;
+  color: #1976d2;
+  cursor: pointer;
+  font-size: 14px;
+  margin-bottom: 12px;
+  padding: 0;
+  text-align: left;
+  transition: color 0.2s ease;
+}
+
+.add-link:hover {
+  text-decoration: underline;
+  color: #1259a7;
+}
+
+/* 📱 Phone Input Overrides */
+.phone-container {
+  width: 100%;
+}
+
+.react-tel-input {
+  width: 100% !important;
+}
+
+.react-tel-input .form-control {
+  width: 100% !important;
+  border-radius: 8px !important;
+  padding: 10px 12px 10px 50px !important;
+  border: 1px solid #d1d5db !important;
+  font-size: 14px !important;
+  height: 42px !important;
+}
+
+/* 💾 Save Button */
+.save-btn {
+  width: 100%;
+  padding: 12px;
+  background: #1976d2;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.save-btn:hover {
+  background: #1259a7;
+}
+
+.save-btn:active {
+  transform: scale(0.98);
+}
+
+/* 📇 Contacts List */
+.contacts-list {
+  width: 100%;
+  max-width: 900px;
+}
+
+.contacts-list h2 {
+  margin-bottom: 15px;
+  font-size: 20px;
+  color: #333;
+}
+
+.contact-card {
+  border: 1px solid #e5e7eb;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  background: #fafafa;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-2px);
+}
+
+/* 🖥 Responsive Design */
+@media (max-width: 768px) {
+  .contact-form {
+    width: 95%;
+    padding: 20px;
+  }
+
+  .contacts-list {
+    width: 95%;
+  }
+
+  .birthday {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .avatar {
+    width: 70px;
+    height: 70px;
+  }
+
+  .save-btn {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .contact-card {
+    font-size: 14px;
+  }
+}
