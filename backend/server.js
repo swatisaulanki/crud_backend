@@ -51,10 +51,16 @@ const app = express();
 
 // Middlewares
 // app.use(cors());
-app.use(cors({
-  origin: "http://localhost:3000", // frontend port
-  credentials: true,              // if you're using cookies or auth headers
-}));
+app.use(
+  cors({
+    origin: [
+      "http://localhost:3000",              
+      "https://rbac-user-admin-mern-app.vercel.app", 
+    ],
+    credentials: true,
+  })
+);
+
 app.use(express.json()); // Must be before routes
 
 // Root route
