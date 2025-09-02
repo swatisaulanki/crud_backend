@@ -52,7 +52,7 @@ const app = express();
 // Middlewares
 // app.use(cors());
 app.use(cors({
-  origin: "http://localhost:3004", // frontend port
+  origin: "http://localhost:3000", // frontend port
   credentials: true,              // if you're using cookies or auth headers
 }));
 app.use(express.json()); // Must be before routes
