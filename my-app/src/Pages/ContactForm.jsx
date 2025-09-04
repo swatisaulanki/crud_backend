@@ -26,7 +26,7 @@ const ContactForm = () => {
   const token = localStorage.getItem("token");
   const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
 
-  // ✅ Validate login
+  // Validate login
   useEffect(() => {
     if (!token || !loggedInUser) {
       alert("You must login first");
@@ -79,9 +79,9 @@ const ContactForm = () => {
         { headers: { Authorization: `Bearer ${token}` } }
       );
 
-      // ✅ Scroll top and show success message
+      // Scroll top and show success message
       window.scrollTo({ top: 0, behavior: "smooth" });
-      setSuccessMessage("✅ Contact saved successfully!");
+      setSuccessMessage("Contact saved successfully!");
 
       // Hide after 3s
       setTimeout(() => setSuccessMessage(""), 3000);
@@ -111,7 +111,7 @@ const ContactForm = () => {
 
   return (
     <div className="contact-container">
-      {/* ✅ Success banner */}
+      {/* Success banner */}
       {successMessage && (
         <div className="success-banner">
           {successMessage}

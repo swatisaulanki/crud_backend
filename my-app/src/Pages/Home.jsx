@@ -33,7 +33,7 @@ const Home = () => {
       setFilteredContacts(data);
     } catch (err) {
       console.error("Error fetching contacts:", err);
-      setMessage("❌ Failed to fetch contacts. Please login again.");
+      setMessage("Failed to fetch contacts. Please login again.");
       setTimeout(() => navigate("/login"), 1500);
     }
   };
